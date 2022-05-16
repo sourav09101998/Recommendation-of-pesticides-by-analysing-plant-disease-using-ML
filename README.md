@@ -1,0 +1,1 @@
+# Recommendation-of-pesticides-by-analysing-plant-disease-using-ML
