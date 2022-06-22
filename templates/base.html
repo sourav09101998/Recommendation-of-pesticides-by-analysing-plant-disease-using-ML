@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PLANT LEAF DISEASE PREDICTION</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+      integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        
+      }
+
+      body {
+        background: white url("{% static 'images/3.jpg' %}") no-repeat;
+        background-size: 150%;
+      }
+      .heading {
+        color: #008970;
+        width: 70%;
+        margin-inline: auto;
+        background: #ffffff42;
+      }
+      .heading h1 {
+        font-size: 4rem;
+        text-align: center;
+      }
+      form {
+        display: flex;
+        height: 85vh;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        margin-inline: auto;
+      }
+
+      .details h2 {
+        position: relative;
+        top: 100px;
+        margin: auto;
+        color: rgb(18, 231, 231);
+        font-size: 3rem;
+      }
+
+      label:hover {
+        transform: scale(1.03);
+      }
+
+      .details h2 {
+        /* margin-bottom: 300px; */
+        position: relative;
+        top: 100px;
+        margin: auto;
+        color: rgb(18, 231, 231);
+        font-size: 3rem;
+      }
+
+      .details h1 {
+        color: white;
+        padding: 20px;
+        border-radius: 15px;
+        background-color: rgb(8, 8, 8);
+      }
+
+      .upload {
+        font-size: 20px;
+        background-color: rgb(255, 252, 252);
+        border-radius: 20px;
+        outline: none;
+        width: 500px;
+        color: rgb(0, 0, 0);
+        border: 2px solid #01c7a3;
+      }
+
+      ::-webkit-file-upload-button {
+        color: rgb(255, 252, 252);
+        padding: 20px;
+        border: 2px solid rgb(201, 6, 6);
+        background-color: rgb(201, 6, 6);
+        border-radius: 15px;
+      }
+
+      ::-webkit-file-upload-button:hover {
+        border-radius: 20px;
+        cursor: pointer;
+        border: 2px solid rgb(177, 174, 174);
+      }
+
+      input[type="submit"] {
+        position: absolute;
+        margin-top: 200px;
+        padding: 10px 35px;
+        background-color: #008970;
+        border-radius: 15px;
+        color: white;
+        font-size: 22px;
+        border: 2px solid #008970;
+      }
+      input[type="submit"]:hover {
+        background-color: #01c7a3;
+        border: 2px solid #01c7a3;
+      }
+    </style>
+  </head>
+
+  <body>
+      {% block content %}
+      {% endblock %}
+  </body>
+</html>
