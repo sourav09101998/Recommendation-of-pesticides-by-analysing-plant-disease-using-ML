@@ -3,18 +3,12 @@
 {% block content %}
 
 <section id="inputsec">
-  <!-- <div class="heading">
-    <h1>PLANT LEAF DISEASE PREDICTION</h1>
-  </div> -->
   <hr class="mt-2 mb-5">
   <h1 class="text-center mt-4 mb-4">PLANT LEAF DISEASE PREDICTION</h1>
 
-  <!-- <hr class="mt-2 mb-5"> -->
   <div id="form">
     <form action="" method="post" enctype="multipart/form-data" onsubmit="showloading()">
       {% csrf_token %}
-      <!-- <input type="file" name="image" class="upload" /> -->
-      <!-- <input class="form-control form-control-lg" name="image" id="formFileLg" type="file"> -->
       <div class="container py-5">
 
         <div class="row py-4">
@@ -44,7 +38,3 @@
   </div>
 </section>
 {% endblock %}
-<!-- <div>
-  <label for="formFileLg" class="form-label">Large file input example</label>
-  <input class="form-control form-control-lg" id="formFileLg" type="file">
-</div> -->
