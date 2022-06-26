@@ -1,16 +1,50 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="heading">
-  <h1>PLANT LEAF DISEASE PREDICTION</h1>
-</div>
-<section>
-  <form action="" method="post" enctype="multipart/form-data" onsubmit="showloading()">
-    {% csrf_token %}
-    <input type="file" name="image" class="upload" />
-    <br />
-    <br />
-    <input type="submit" name="submit" value="Predict" />
-  </form>
+
+<section id="inputsec">
+  <!-- <div class="heading">
+    <h1>PLANT LEAF DISEASE PREDICTION</h1>
+  </div> -->
+  <hr class="mt-2 mb-5">
+  <h1 class="text-center mt-4 mb-4">PLANT LEAF DISEASE PREDICTION</h1>
+
+  <!-- <hr class="mt-2 mb-5"> -->
+  <div id="form">
+    <form action="" method="post" enctype="multipart/form-data" onsubmit="showloading()">
+      {% csrf_token %}
+      <!-- <input type="file" name="image" class="upload" /> -->
+      <!-- <input class="form-control form-control-lg" name="image" id="formFileLg" type="file"> -->
+      <div class="container py-5">
+
+        <div class="row py-4">
+          <div class="col-lg-6 mx-auto">
+
+            <!-- Uploaded image area-->
+            <p class="font-italic text-black text-center">The image uploaded will be rendered inside the box below.</p>
+            <div class="image-area mt-4"><img id="imageResult" src="#" alt=""
+                class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+
+            <!-- Upload image input-->
+            <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+              <input id="upload" type="file" onchange="readURL(this);" name="image" class="form-control border-0">
+              <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
+              <div class="input-group-append">
+                <label for="upload" class="btn btn-dark m-0 rounded-pill px-4"> <i
+                    class="fa fa-cloud-upload mr-2 text-muted"></i><small
+                    class="text-uppercase font-weight-bold text-black">Choose file</small></label>
+              </div>
+            </div>
+            <input type="submit" name="submit" value="Predict" />
+
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
 </section>
 {% endblock %}
+<!-- <div>
+  <label for="formFileLg" class="form-label">Large file input example</label>
+  <input class="form-control form-control-lg" id="formFileLg" type="file">
+</div> -->
